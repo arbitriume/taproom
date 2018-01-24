@@ -1,45 +1,37 @@
-.nav_bar {
+.page_nav {
     display: grid;
-    grid-gap: 30px;
-    grid-template-columns: 200px repeat(6, 1fr);
+    grid-template-columns: repeat(2, [col] auto);
     background-color: #4A4848;
-    margin:12px;
+}
+
+.comp_logo {
+    display: grid;
+    grid-column: col;
+    text-transform: uppercase;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-decoration: none;
+    color: #CFCECE;
+    letter-spacing: 1px;
+    font-size: 150%;
+}
+
+.nav_bar {
+    grid-column: col 2;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    background-color: #4A4848;
+    margin: 12px;
     text-transform: uppercase;
     font-size: 10px;
     align-items: center;
-}
-
-.login_box {
-    display: flex;
-}
-
-.nav_log {
-    flex: 1 0 auto;
-}
-
-.forgot_pass {
-    flex: 1 0 auto;
-}
-
-.new_account {
-    flex: 1 0 auto;
-}
-
-.log_form_field {
-    display: grid;
-    align-items: center;
-    grid-template-columns: 1fr;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 20px;
-    padding-right: 20px;
 }
 
 .nav_text {
     //background-color: #7F26E9;
     padding-top: 30px;
     padding-bottom: 30px;
-    font-family: Arcon;
     text-decoration: none;
     color: #CFCECE;
     letter-spacing: 1px;
@@ -52,4 +44,51 @@
 
 .main_header {
     background-color: #4A4848;
+}
+
+.buttonClass {
+    font-size: 24px;
+    display: none;
+}
+
+.material-icons.md-light {
+    color: rgba(255, 255, 255, 1);
+}
+
+.material-icons.md-light.md-inactive {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+@media screen and (max-width : 750px) {
+    .nav_bar {
+        display: none;
+    }
+
+    .nav_item {
+        display: grid;
+        grid-template-columns: 200px;
+        grid-template-rows: 40px;
+        background-color: #4A4848;
+        text-transform: uppercase;
+        font-size: 10px;
+        align-items: center;
+    }
+
+    .buttonClass:focus ~ nav {
+        display: grid;
+    }
+
+    .buttonClass {
+        font-size: 24px;
+        display: grid;
+        grid-template-columns: 200px;
+    }
+
+    .material-icons.md-light {
+        color: rgba(255, 255, 255, 1);
+    }
+
+    .material-icons.md-light.md-inactive {
+        color: rgba(255, 255, 255, 0.3);
+    }
 }
