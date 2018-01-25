@@ -17,12 +17,12 @@ export class NavBar extends React.Component {
         const pages = ["Features", "Our Team", "News", "Contact", "Admin"];
         const navLinks = pages.map((page, index) => {
            return (
-                 <a href={"#"} className="nav_item nav_text" key={index+1}>
+                 <a href={"#"} className="bp--navigation-menuitem" key={index+1}>
                      {page}
                  </a>
            )
         });
 
-        return <nav className="nav_bar">{navLinks}</nav>
+        return <nav className="bp--navigation-menubar">{navLinks}</nav>
     }
 }
