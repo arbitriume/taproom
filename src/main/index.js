@@ -15,12 +15,12 @@ class WelcomePage extends React.Component {
     render() {
         return (
             <MuiThemeProvider>
-                <div className="main_header">
-                    <button className="buttonClass">
+                <div className="bp--nav-container">
+                    <button className="bp--hamburger-button">
                         <MenuIcon key="foo" className="material-icons md-24 md-light"/>
                     </button>
-                    <div className="page_nav">
-                        <a href={"#"} className="comp_logo" key={1}>
+                    <div className="bp--navpage-container">
+                        <a href={"#"} className="bp--company-logo" key={1}>
                             {"Company Logo"}
                         </a>
                         <NavBar />
