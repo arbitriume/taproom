@@ -28,17 +28,6 @@ class App extends React.Component {
     render() {
         return (
             <MuiThemeProvider>
-                <div className="bp--nav-container">
-                    <button className="bp--hamburger-button">
-                        <MenuIcon key="foo" className="material-icons md-24 md-light"/>
-                    </button>
-                    <div className="bp--navpage-container">
-                        <a href={"#"} className="bp--company-logo" key={1}>
-                            {"Company Logo"}
-                        </a>
-                        <NavBar />
-                    </div>
-                </div>
                 <Router>
                     <div>
                         <div className="bp--nav-container">
