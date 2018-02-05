@@ -1,5 +1,20 @@
 import React from 'react';
+import {
+    BrowserRouter as Router,
+    Route,
+    Link
+} from 'react-router-dom';
 import MenuIcon from 'material-ui-icons/Menu';
+
+const pages = ["Features", "Our Team", "News", "Contact", "Log In"];
+
+const pageToRoute = {
+    "Features": "features",
+    "Our Team": "our-team",
+    "News": "news",
+    "Contact": "contact",
+    "Log In": "log-in"
+};
 
 /**
  * The UI Component representing the navigation menu bar that spans the top of the page.
@@ -14,12 +29,10 @@ export class NavBar extends React.Component {
      * @function
      */
     render() {
-        const pages = ["Features", "Our Team", "News", "Contact", "Admin"];
+        const pages = ["Features", "Our Team", "News", "Contact", "Log In"];
         const navLinks = pages.map((page, index) => {
            return (
-                 <a href={"#"} className="bp--navigation-menuitem" key={index+1}>
-                     {page}
-                 </a>
+               <Link className="bp--navigation-menuitem"to={`/${pageToRoute[page]}`}>{page}</Link>
            )
         });
 
