@@ -4,6 +4,7 @@ const webpackBase = require("./base/base.config");
 
 module.exports = webpackBase({
     devServer: {
+        historyApiFallback: true,
         contentBase: path.resolve(__dirname, "../../dist"),
         hot: true,
         index: "index.html",
