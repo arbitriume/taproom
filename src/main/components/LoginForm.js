@@ -5,6 +5,50 @@ import TextField from 'material-ui/TextField';
 import { FormControlLabel } from 'material-ui/Form';
 import Checkbox from 'material-ui/Checkbox';
 
+const confirmPass = isSigningUp => isSigningUp
+    ? (<div className="bp--login-field">
+        <TextField
+            label="Confirm Password"
+            type="password"
+        />
+    </div>)
+    : null;
+
+const userEmail = isSigningUp => isSigningUp
+    ? (<div className="bp--login-field">
+        <TextField
+            label="Email"
+        />
+    </div>)
+    : null;
+
+const userAge = isSigningUp => isSigningUp
+    ? (<div className="bp--login-field">
+        <FormControlLabel
+            control={
+                <Checkbox
+                    value="checkedG"
+                />
+            }
+            label="I'm 21 or older."
+        />
+    </div>)
+    : null;
+
+const flexSetting = (isSigningUp, toggleSignUp) => isSigningUp
+    ? (<div className="bp--login-field">
+        {"Already have an account?"}
+        <a onClick={toggleSignUp} href={"#"} className="new_account">
+            {"Log In"}
+        </a>
+    </div>)
+    : (<div className="bp--login-field">
+        {"Need an account?"}
+        <a onClick={toggleSignUp} href={"#"} className="new_account">
+            {"Sign Up"}
+        </a>
+    </div>);
+
 /**
  * The UI Component representing the drop down menu for logging in/signing up.
  *
@@ -13,7 +57,7 @@ import Checkbox from 'material-ui/Checkbox';
 export class LoginForm extends React.Component {
     constructor() {
         super();
-        this.handleClick = this.handleClick.bind(this);
+        this.toggleSignUp = this.toggleSignUp.bind(this);
         this.state = {isSigningUp: false};
     }
 
@@ -22,12 +66,8 @@ export class LoginForm extends React.Component {
      *
      * @function
      */
-    handleClick() {
-        let state = this.state.isSigningUp;
-        state = !state;
-        this.setState({
-            isSigningUp: state
-        });
+    toggleSignUp() {
+        this.setState({ isSigningUp: !this.state.isSigningUp });
     }
 
     /**
@@ -36,56 +76,7 @@ export class LoginForm extends React.Component {
      * @function
      */
     render() {
-        let confirmPass, userEmail, userAge, flexSetting, buttonText;
-        if(this.state.isSigningUp) {
-            confirmPass =
-                <div className="bp--login-field">
-                    <TextField
-                        label="Confirm Password"
-                        type="password"
-                    />
-                </div>;
-            userEmail =
-                <div className="bp--login-field">
-                    <TextField
-                        label="Email"
-                    />
-                </div>;
-            userAge =
-                <div className="bp--login-field">
-
-                    <FormControlLabel
-                        control={
-                            <Checkbox
-                                value="checkedG"
-                            />
-                        }
-                        label="I'm 21 or older."
-                    />
-
-                </div>;
-            flexSetting =
-                <div className="bp--login-field">
-                    {"Already have an account?"}
-                    <a onClick={this.handleClick} href={"#"} className="new_account">
-                        {"Log In"}
-                    </a>
-                </div>;
-            buttonText = "Join";
-        } else {
-            confirmPass = null;
-            userEmail = null;
-            userAge = null;
-            buttonText = "Log In";
-            flexSetting =
-                <div className="bp--login-field">
-                    {"Need an account?"}
-                    <a onClick={this.handleClick} href={"#"} className="new_account">
-                        {"Sign Up"}
-                    </a>
-                </div>;
-        }
-
+        const { isSigningUp } = this.state;
         return (
             <div className="login_form">
                 <div className="bp--login-field">
@@ -93,27 +84,24 @@ export class LoginForm extends React.Component {
                         label="Username"
                     />
                 </div>
-                {userEmail}
+                {userEmail(isSigningUp)}
                 <div className="bp--login-field">
                     <TextField
                         label="Password"
                         type="password"
                     />
                 </div>
-                {confirmPass}
-                <br />
-                {userAge}
+                {confirmPass(isSigningUp)}
+                {userAge(isSigningUp)}
                 <div className="bp--login-field">
-                    <Button raised={true} disableFocusRipple={true} disableRipple={true}>{buttonText}</Button>
+                    <Button raised={true} disableFocusRipple={true} disableRipple={true}>{isSigningUp ? "Join" : "Log in"}</Button>
                 </div>
-                <br />
                 <div className="bp--login-field">
                     <a href={"#"} className="forgot_pass">
                         {"Forgot Password?"}
                     </a>
                 </div>
-                <br />
-                {flexSetting}
+                {flexSetting(isSigningUp, this.toggleSignUp)}
             </div>
         );
     }
