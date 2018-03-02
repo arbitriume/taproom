@@ -4,6 +4,20 @@
     background-color: #4A4848;
 }
 
+.bp--login-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #7F26E9;
+}
+
+.bp--login-field {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    padding-left: 20px
+}
+
 .bp--company-logo {
     display: grid;
     grid-column: col;

@@ -6,8 +6,6 @@ import {
     Link
 } from 'react-router-dom';
 
-const pages = ["Features", "Our Team", "News", "Contact", "Log In"];
-
 const pageToRoute = {
     "Features": "features",
     "Our Team": "our-team",
@@ -32,7 +30,7 @@ export class NavBar extends React.Component {
         const pages = ["Features", "Our Team", "News", "Contact", "Log In"];
         const navLinks = pages.map((page, index) => {
            return (
-               <Link className="bp--navigation-menuitem"to={`/${pageToRoute[page]}`}>{page}</Link>
+               <Link key={index + 1} className="bp--navigation-menuitem" to={`/${pageToRoute[page]}`}>{page}</Link>
            )
         });
 
