@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
-import Button from 'material-ui/Button';
-import TextField from 'material-ui/TextField';
-import { FormControlLabel } from 'material-ui/Form';
-import Checkbox from 'material-ui/Checkbox';
+import Button from "material-ui/Button";
+import TextField from "material-ui/TextField";
+import { FormControlLabel } from "material-ui/Form";
+import Checkbox from "material-ui/Checkbox";
 
 const confirmPass = isSigningUp => isSigningUp
     ? (<div className="bp--login-field">

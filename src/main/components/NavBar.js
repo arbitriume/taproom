@@ -1,10 +1,5 @@
-import React from 'react';
-import MenuIcon from 'material-ui-icons/Menu';
-import {
-    BrowserRouter as Router,
-    Route,
-    Link
-} from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
 const pageToRoute = {
     "Features": "features",
@@ -29,11 +24,11 @@ export class NavBar extends React.Component {
     render() {
         const pages = ["Features", "Our Team", "News", "Contact", "Log In"];
         const navLinks = pages.map((page, index) => {
-           return (
-               <Link key={index + 1} className="bp--navigation-menuitem" to={`/${pageToRoute[page]}`}>{page}</Link>
-           )
+            return (
+                <Link key={index + 1} className="bp--navigation-menuitem" to={`/${pageToRoute[page]}`}>{page}</Link>
+            );
         });
 
-        return <nav className="bp--navigation-menubar">{navLinks}</nav>
+        return <nav className="bp--navigation-menubar">{navLinks}</nav>;
     }
 }

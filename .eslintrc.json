@@ -1,8 +1,19 @@
 {
     "env": {
-        "browser": true
+        "browser": true,
+        "es6": true
     },
-    "extends": "eslint:recommended",
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "plugins": [
+        "react-html"
+    ],
+    "extends": ["eslint:recommended", "plugin:react-html/recommended"],
     "rules": {
         "indent": ["error", 4],
         "linebreak-style": ["error", "unix"],
