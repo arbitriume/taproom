@@ -13,7 +13,7 @@
     "plugins": [
         "react-html"
     ],
-    "extends": ["eslint:recommended", "plugin:react-html/recommended"],
+    "extends": ["eslint:recommended", "plugin:react/recommended"],
     "rules": {
         "indent": ["error", 4],
         "linebreak-style": ["error", "unix"],
