@@ -1,21 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { NavBar } from './components/NavBar';
-import { LoginForm } from './components/LoginForm';
-import MenuIcon from 'material-ui-icons/Menu';
-import Paper from 'material-ui/Paper';
+import React from "react";
+import ReactDOM from "react-dom";
+import { NavBar } from "./components/NavBar";
+import { LoginForm } from "./components/LoginForm";
+import MenuIcon from "material-ui-icons/Menu";
+import Paper from "material-ui/Paper";
 import {
     BrowserRouter as Router,
     Route,
     Switch
-} from 'react-router-dom'
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import './styles.css';
+} from "react-router-dom";
+import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
+import "./styles.css";
 
 const style = {
     margin: 20,
-    textAlign: 'center',
-    display: 'inline-block',
+    textAlign: "center",
+    display: "inline-block",
 };
 
 /**
