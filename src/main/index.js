@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { NavBar } from "./components/NavBar";
+import { ContactForm } from "./components/ContactForm";
 import { LoginForm } from "./components/LoginForm";
 import MenuIcon from "material-ui-icons/Menu";
 import Paper from "material-ui/Paper";
@@ -29,22 +30,34 @@ const createPage = () => (
     </div>);
 
 /**
+ * Creates the Contact Us page.
+ *
+ * @function
+ */
+const createContactPage = () => (
+    <div className = "bp--login-wrapper">
+        <Paper className="bp--page-content" style={style} zdepth={3} rounded={"false"}>
+            <ContactForm/>
+        </Paper>
+    </div>);
+
+/**
  * Creates the Login/Sign-up page.
  *
  * @function
  */
 const createLoginPage = () => (
     <div className = "bp--login-wrapper">
-        <Paper style={style} zdepth={3} rounded={"false"}>
+        <Paper className="bp--page-content" style={style} zdepth={3} rounded={"false"}>
             <LoginForm/>
         </Paper>
     </div>);
 
 const Home = createPage;
 const Features = createPage;
-const OurTeam = createPage;
+const Help = createPage;
 const News = createPage;
-const Contact = createPage;
+const Contact = createContactPage;
 const LogIn = createLoginPage;
 
 /**
@@ -72,7 +85,7 @@ class App extends React.Component {
                         <Switch>
                             <Route exact path="/" component={Home}/>
                             <Route path="/features" component={Features}/>
-                            <Route path="/our-team" component={OurTeam}/>
+                            <Route path="/help" component={Help}/>
                             <Route path="/news" component={News}/>
                             <Route path="/contact" component={Contact}/>
                             <Route path="/log-in" component={LogIn}/>
