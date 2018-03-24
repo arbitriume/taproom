@@ -5,7 +5,7 @@ import TextField from "material-ui/TextField";
 import { FormControlLabel } from "material-ui/Form";
 
 /**
- * The UI Component representing the drop down menu for logging in/signing up.
+ * The UI Component representing the form used for contacting us.
  *
  * @class
  */
@@ -20,7 +20,7 @@ export class ContactForm extends React.Component {
         this.setState({ selectedValue: event.target.value });
 };
     /**
-     * Renders the drop down menu for logging in/signing up.
+     * Renders the contact form.
      *
      * @function
      */

@@ -50,7 +50,7 @@ const flexSetting = (isSigningUp, toggleSignUp) => isSigningUp
     </div>);
 
 /**
- * The UI Component representing the drop down menu for logging in/signing up.
+ * The UI Component representing the form used for logging in/signing up.
  *
  * @class
  */
@@ -71,7 +71,7 @@ export class LoginForm extends React.Component {
     }
 
     /**
-     * Renders the drop down menu for logging in/signing up.
+     * Renders the logging in/signing up form.
      *
      * @function
      */
