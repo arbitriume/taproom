@@ -37,7 +37,7 @@ export class ContactForm extends React.Component {
                             <Radio
                                 checked={this.state.selectedValue === 'a'}
                                 onChange={this.handleChange}
-                                value="a"
+                                value="general"
                             />
                         }
                         label="General"
@@ -47,7 +47,7 @@ export class ContactForm extends React.Component {
                             <Radio
                                 checked={this.state.selectedValue === 'b'}
                                 onChange={this.handleChange}
-                                value="b"
+                                value="question"
                             />
                         }
                         label="Question"
@@ -57,7 +57,7 @@ export class ContactForm extends React.Component {
                             <Radio
                                 checked={this.state.selectedValue === 'c'}
                                 onChange={this.handleChange}
-                                value="c"
+                                value="defect"
                             />
                         }
                         label="Defect"
