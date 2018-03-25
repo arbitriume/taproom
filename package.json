@@ -1,8 +1,8 @@
 {
-  "name": "client",
+  "name": "taproom",
   "version": "0.0.0",
   "description": "Front-end for beers project",
-  "main": "index.js",
+  "main": "./src/main/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config ./build/webpack/dev.config.js",

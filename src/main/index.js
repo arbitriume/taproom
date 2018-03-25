@@ -52,11 +52,11 @@ const LogIn = createLoginPage;
  *
  * @class
  */
-class App extends React.Component {
+export default class Taproom extends React.Component {
     render() {
         return (
             <MuiThemeProvider>
-                <Router>
+                {/*<Router>*/}
                     <div>
                         <div className="bp--nav-container">
                             <button className="bp--hamburger-button">
@@ -78,11 +78,9 @@ class App extends React.Component {
                             <Route path="/log-in" component={LogIn}/>
                         </Switch>
                     </div>
-                </Router>
+                {/*</Router>*/}
             </MuiThemeProvider>
         );
     }
 }
-
-ReactDOM.render(<App />, document.getElementById("app"));
 
