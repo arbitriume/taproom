@@ -66,7 +66,7 @@ export class ContactForm extends React.Component {
                 <div className="bp--login-field">
                     <TextField
                         multiline={true}
-                        rows={4}
+                        //rows={4}
                         fullWidth={true}
                         disableUnderline={true}
                         placeholder="Enter Message"
