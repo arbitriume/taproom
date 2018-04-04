@@ -13,7 +13,7 @@ export class ContactForm extends React.Component {
     constructor() {
         super();
         this.handleChange = this.handleChange.bind(this);
-        this.state = {selectedValue: "a"};
+        this.state = {selectedValue: "general"};
     }
 
     handleChange(event) {
@@ -28,52 +28,47 @@ export class ContactForm extends React.Component {
         return (
             <div className="contact_form">
                 <h1>{"What's Up?"}</h1>
-                <div className="bp--contact-text">
-                    <p>{"Are you looking for support? In our help center we’ve gathered answers to FAQ, as well as many tips, tricks and tutorials for working with Brew Yah. If you don’t find what you’re looking for, please don’t hesitate to get in touch; we’ll try and get back to you as soon as possible."}</p>
-                </div>
-                <div>
-                    <FormControlLabel
-                        control={
-                            <Radio
-                                checked={this.state.selectedValue === 'a'}
-                                onChange={this.handleChange}
-                                value="general"
-                            />
-                        }
-                        label="General"
-                    />
-                    <FormControlLabel
-                        control={
-                            <Radio
-                                checked={this.state.selectedValue === 'b'}
-                                onChange={this.handleChange}
-                                value="question"
-                            />
-                        }
-                        label="Question"
-                    />
-                    <FormControlLabel
-                        control={
-                            <Radio
-                                checked={this.state.selectedValue === 'c'}
-                                onChange={this.handleChange}
-                                value="defect"
-                            />
-                        }
-                        label="Defect"
-                    />
-                </div>
+                <p className="bp--contact-text">
+                    {"Are you looking for support? In our help center we’ve gathered answers to FAQ, as well as many tips, tricks and tutorials for working with Brew Yah. If you don’t find what you’re looking for, please don’t hesitate to get in touch; we’ll try and get back to you as soon as possible."}
+                </p>
+                <FormControlLabel
+                    control={
+                        <Radio
+                            checked={this.state.selectedValue === "general"}
+                            onChange={this.handleChange}
+                            value="general"
+                        />
+                    }
+                    label="General"
+                />
+                <FormControlLabel
+                    control={
+                        <Radio
+                            checked={this.state.selectedValue === "question"}
+                            onChange={this.handleChange}
+                            value="question"
+                        />
+                    }
+                    label="Question"
+                />
+                <FormControlLabel
+                    control={
+                        <Radio
+                            checked={this.state.selectedValue === "defect"}
+                            onChange={this.handleChange}
+                            value="defect"
+                        />
+                    }
+                    label="Defect"
+                />
+                <TextField
+                    className="bp--login-field"
+                    multiline={true}
+                    fullWidth={true}
+                    placeholder="Enter Message"
+                />
                 <div className="bp--login-field">
-                    <TextField
-                        multiline={true}
-                        //rows={4}
-                        fullWidth={true}
-                        disableUnderline={true}
-                        placeholder="Enter Message"
-                    />
-                </div>
-                <div className="bp--login-field">
-                    <Button raised={true} disableFocusRipple={true} disableRipple={true}>{"Send"}</Button>
+                    <Button variant="raised" disableFocusRipple={true} disableRipple={true}>{"Send"}</Button>
                 </div>
             </div>
         );

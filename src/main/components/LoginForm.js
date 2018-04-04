@@ -94,7 +94,7 @@ export class LoginForm extends React.Component {
                 {confirmPass(isSigningUp)}
                 {userAge(isSigningUp)}
                 <div className="bp--login-field">
-                    <Button raised={true} disableFocusRipple={true} disableRipple={true}>{isSigningUp ? "Join" : "Log in"}</Button>
+                    <Button variant="raised" disableFocusRipple={true} disableRipple={true}>{isSigningUp ? "Join" : "Log in"}</Button>
                 </div>
                 <div className="bp--login-field">
                     <a href={"#"} className="forgot_pass">

@@ -34,7 +34,7 @@ const createPage = () => (
  *
  * @function
  */
-const createContactPage = () => (
+const ContactPage = () => (
     <div className = "bp--login-wrapper">
         <Paper className="bp--page-content" style={style} zdepth={3} rounded={"false"}>
             <ContactForm/>
@@ -46,7 +46,7 @@ const createContactPage = () => (
  *
  * @function
  */
-const createLoginPage = () => (
+const LoginPage = () => (
     <div className = "bp--login-wrapper">
         <Paper className="bp--page-content" style={style} zdepth={3} rounded={"false"}>
             <LoginForm/>
@@ -57,8 +57,8 @@ const Home = createPage;
 const Features = createPage;
 const Help = createPage;
 const News = createPage;
-const Contact = createContactPage;
-const LogIn = createLoginPage;
+const Contact = ContactPage;
+const LogIn = LoginPage;
 
 /**
  * The UI Component representing the navigation menu bar that spans the top of the page.
@@ -88,7 +88,7 @@ class App extends React.Component {
                             <Route path="/help" component={Help}/>
                             <Route path="/news" component={News}/>
                             <Route path="/contact" component={Contact}/>
-                            <Route path="/log-in" component={LogIn}/>
+                            <Route path="/login" component={LogIn}/>
                         </Switch>
                     </div>
                 </Router>

@@ -6,7 +6,7 @@ const pageToRoute = {
     "Help": "help",
     "News": "news",
     "Contact": "contact",
-    "Log In": "log-in"
+    "Log In": "login"
 };
 
 /**
