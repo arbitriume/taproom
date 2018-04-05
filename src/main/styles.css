@@ -11,6 +11,14 @@
     background-color: #7F26E9;
 }
 
+.bp--contact-text {
+    padding: 10px;
+}
+
+.bp--page-content {
+    max-width: 350px;
+}
+
 .bp--login-field {
     padding-top: 10px;
     padding-bottom: 10px;
