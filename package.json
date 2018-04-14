@@ -7,8 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config ./build/webpack/dev.config.js",
     "start:dev": "webpack-dev-server --config ./build/webpack/dev.config.js",
-    "lint": "eslint ./src",
-    "lint:debug": "node ./node_modules/eslint/bin/eslint.js --debug ./src"
+    "lint": "eslint ./src"
   },
   "repository": {
     "type": "git",
@@ -25,6 +24,7 @@
   "homepage": "https://github.com/arbitriume/client#readme",
   "devDependencies": {
     "eslint": "^4.19.1",
+    "eslint-plugin-brewyah": "git://github.com/brewyah/eslint-plugin-brewyah.git",
     "eslint-plugin-react": "^7.7.0",
     "eslint-plugin-react-html": "^1.0.0"
   },
