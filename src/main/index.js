@@ -1,15 +1,10 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import { NavBar } from "./components/NavBar";
-import { ContactForm } from "./components/ContactForm";
-import { LoginForm } from "./components/LoginForm";
+import {NavBar} from "./components/NavBar";
+import {ContactForm} from "./components/ContactForm";
+import {LoginForm} from "./components/LoginForm";
 import MenuIcon from "material-ui-icons/Menu";
 import Paper from "material-ui/Paper";
-import {
-    BrowserRouter as Router,
-    Route,
-    Switch
-} from "react-router-dom";
+import {Route, Switch} from "react-router-dom";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import "./styles.css";
 
@@ -25,7 +20,7 @@ const style = {
  * @function
  */
 const createPage = () => (
-    <div className = "bp--login-wrapper">
+    <div className="bp--login-wrapper">
         <p>{"Hello!"}</p>
     </div>);
 
@@ -35,7 +30,7 @@ const createPage = () => (
  * @function
  */
 const ContactPage = () => (
-    <div className = "bp--login-wrapper">
+    <div className="bp--login-wrapper">
         <Paper className="bp--page-content" style={style} zdepth={3} rounded={"false"}>
             <ContactForm/>
         </Paper>
@@ -47,7 +42,7 @@ const ContactPage = () => (
  * @function
  */
 const LoginPage = () => (
-    <div className = "bp--login-wrapper">
+    <div className="bp--login-wrapper">
         <Paper className="bp--page-content" style={style} zdepth={3} rounded={"false"}>
             <LoginForm/>
         </Paper>
@@ -70,27 +65,27 @@ export default class Taproom extends React.Component {
         return (
             <MuiThemeProvider>
                 {/*<Router>*/}
-                    <div>
-                        <div className="bp--nav-container">
-                            <button className="bp--hamburger-button">
-                                <MenuIcon key="foo" className="material-icons md-24 md-light"/>
-                            </button>
-                            <div className="bp--navpage-container">
-                                <a href={"#"} className="bp--company-logo" key={1}>
-                                    {"Company Logo"}
-                                </a>
-                                <NavBar />
-                            </div>
+                <div>
+                    <div className="bp--nav-container">
+                        <button className="bp--hamburger-button">
+                            <MenuIcon key="foo" className="material-icons md-24 md-light"/>
+                        </button>
+                        <div className="bp--navpage-container">
+                            <a href={"#"} className="bp--company-logo" key={1}>
+                                {"Company Logo"}
+                            </a>
+                            <NavBar/>
                         </div>
-                        <Switch>
-                            <Route exact path="/" component={Home}/>
-                            <Route path="/features" component={Features}/>
-                            <Route path="/help" component={Help}/>
-                            <Route path="/news" component={News}/>
-                            <Route path="/contact" component={Contact}/>
-                            <Route path="/login" component={LogIn}/>
-                        </Switch>
                     </div>
+                    <Switch>
+                        <Route exact path="/" component={Home}/>
+                        <Route path="/features" component={Features}/>
+                        <Route path="/help" component={Help}/>
+                        <Route path="/news" component={News}/>
+                        <Route path="/contact" component={Contact}/>
+                        <Route path="/login" component={LogIn}/>
+                    </Switch>
+                </div>
                 {/*</Router>*/}
             </MuiThemeProvider>
         );

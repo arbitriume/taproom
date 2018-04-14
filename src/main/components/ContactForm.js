@@ -1,8 +1,8 @@
 import React from "react";
-import Radio from 'material-ui/Radio';
+import Radio from "material-ui/Radio";
 import Button from "material-ui/Button";
 import TextField from "material-ui/TextField";
-import { FormControlLabel } from "material-ui/Form";
+import {FormControlLabel} from "material-ui/Form";
 
 /**
  * The UI Component representing the form used for contacting us.
@@ -17,8 +17,9 @@ export class ContactForm extends React.Component {
     }
 
     handleChange(event) {
-        this.setState({ selectedValue: event.target.value });
-};
+        this.setState({selectedValue: event.target.value});
+    }
+
     /**
      * Renders the contact form.
      *
@@ -68,7 +69,13 @@ export class ContactForm extends React.Component {
                     placeholder="Enter Message"
                 />
                 <div className="bp--login-field">
-                    <Button variant="raised" disableFocusRipple={true} disableRipple={true}>{"Send"}</Button>
+                    <Button
+                        variant="raised"
+                        disableFocusRipple={true}
+                        disableRipple={true}
+                    >
+                        {"Send"}
+                    </Button>
                 </div>
             </div>
         );
