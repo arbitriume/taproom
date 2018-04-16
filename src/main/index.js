@@ -6,11 +6,7 @@ import { ContactForm } from "./components/ContactForm";
 import { LoginForm } from "./components/LoginForm";
 import MenuIcon from "material-ui-icons/Menu";
 import Paper from "material-ui/Paper";
-import {
-    BrowserRouter as Router,
-    Route,
-    Switch
-} from "react-router-dom";
+import {Route, Switch} from "react-router-dom";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import "./styles.css";
 
@@ -26,7 +22,7 @@ const style = {
  * @function
  */
 const createPage = () => (
-    <div className = "bp--login-wrapper">
+    <div className="bp--login-wrapper">
         <p>{"Hello!"}</p>
     </div>);
 
@@ -36,7 +32,7 @@ const createPage = () => (
  * @function
  */
 const ContactPage = () => (
-    <div className = "bp--login-wrapper">
+    <div className="bp--login-wrapper">
         <Paper className="bp--page-content" style={style} zdepth={3} rounded={"false"}>
             <ContactForm/>
         </Paper>
@@ -48,7 +44,7 @@ const ContactPage = () => (
  * @function
  */
 const LoginPage = () => (
-    <div className = "bp--login-wrapper">
+    <div className="bp--login-wrapper">
         <Paper className="bp--page-content" style={style} zdepth={3} rounded={"false"}>
             <LoginForm/>
         </Paper>
@@ -93,6 +89,7 @@ export default class Taproom extends React.Component {
                             <Route path="/login" component={LogIn}/>
                         </Switch>
                     </div>*/}
+
                 {/*</Router>*/}
             </MuiThemeProvider>
         );
