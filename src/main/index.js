@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import AppLayout from "./components/AppLayout";
 import { NavBar } from "./components/NavBar";
 import { ContactForm } from "./components/ContactForm";
 import { LoginForm } from "./components/LoginForm";
@@ -70,7 +71,8 @@ export default class Taproom extends React.Component {
         return (
             <MuiThemeProvider>
                 {/*<Router>*/}
-                    <div>
+                    <AppLayout />
+                {/*<div>
                         <div className="bp--nav-container">
                             <button className="bp--hamburger-button">
                                 <MenuIcon key="foo" className="material-icons md-24 md-light"/>
@@ -90,7 +92,7 @@ export default class Taproom extends React.Component {
                             <Route path="/contact" component={Contact}/>
                             <Route path="/login" component={LogIn}/>
                         </Switch>
-                    </div>
+                    </div>*/}
                 {/*</Router>*/}
             </MuiThemeProvider>
         );
