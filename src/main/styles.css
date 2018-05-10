@@ -1,14 +1,14 @@
-.bp--navpage-container {
-    display: grid;
-    grid-template-columns: repeat(2, [col] auto);
-    background-color: #4A4848;
-}
-
-.bp--login-wrapper {
+.bp--page-wrapper {
+    flex: 1 1 auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background-color: #7F26E9;
+}
+
+.content-wrapper {
+    display : flex;
+    flex: 1 1 100%;
+    flex-direction: row;
 }
 
 .bp--contact-text {
@@ -19,98 +19,5 @@
     max-width: 350px;
 }
 
-.bp--login-field {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 20px;
-    padding-left: 20px
-}
-
-.bp--company-logo {
-    display: grid;
-    grid-column: col;
-    text-transform: uppercase;
-    align-items: center;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    text-decoration: none;
-    color: #CFCECE;
-    letter-spacing: 1px;
-    font-size: 150%;
-}
-
-.bp--navigation-menubar {
-    grid-column: col 2;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    background-color: #4A4848;
-    margin: 12px;
-    text-transform: uppercase;
-    font-size: 10px;
-    align-items: center;
-}
-
-.bp--navigation-menuitem {
-    //background-color: #7F26E9;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    text-decoration: none;
-    color: #CFCECE;
-    letter-spacing: 1px;
-    font-size: 150%;
-}
-
-.bp--navigation-menuitem:hover {
-    color: #FFFFFF;
-}
-
-.bp--nav-container {
-    background-color: #4A4848;
-}
-
-.bp--hamburger-button {
-    font-size: 24px;
-    display: none;
-}
-
-.material-icons.md-light {
-    color: rgba(255, 255, 255, 1);
-}
-
-.material-icons.md-light.md-inactive {
-    color: rgba(255, 255, 255, 0.3);
-}
-
 @media screen and (max-width : 750px) {
-    .bp--navigation-menubar {
-        display: none;
-    }
-
-    .bp--navigation-menuitem {
-        display: grid;
-        grid-template-columns: 200px;
-        grid-template-rows: 40px;
-        background-color: #4A4848;
-        text-transform: uppercase;
-        font-size: 10px;
-        align-items: center;
-    }
-
-    .bp--hamburger-button:focus ~ nav {
-        display: grid;
-    }
-
-    .bp--hamburger-button {
-        font-size: 24px;
-        display: grid;
-        grid-template-columns: 200px;
-    }
-
-    .material-icons.md-light {
-        color: rgba(255, 255, 255, 1);
-    }
-
-    .material-icons.md-light.md-inactive {
-        color: rgba(255, 255, 255, 0.3);
-    }
 }
